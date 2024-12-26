@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Portfolio-Pokesh/static/css/main.e4c229df.css",
+    "main.js": "/Portfolio-Pokesh/static/js/main.765057c5.js",
+    "static/js/453.1407b060.chunk.js": "/Portfolio-Pokesh/static/js/453.1407b060.chunk.js",
+    "static/media/pos.jpg": "/Portfolio-Pokesh/static/media/pos.f982c367070f46338cce.jpg",
+    "index.html": "/Portfolio-Pokesh/index.html",
+    "static/media/logo.svg": "/Portfolio-Pokesh/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.e4c229df.css.map": "/Portfolio-Pokesh/static/css/main.e4c229df.css.map",
+    "main.765057c5.js.map": "/Portfolio-Pokesh/static/js/main.765057c5.js.map",
+    "453.1407b060.chunk.js.map": "/Portfolio-Pokesh/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4c229df.css",
+    "static/js/main.765057c5.js"
+  ]
+}
