@@ -1,0 +1,10 @@
+
+
+*{
+  /* background-image: conic-gradient(from 36deg at 20% 80%, #A100FFFF 0%, #000000 25%, #119CFDFF 30%) */
+  /* box-shadow: 1px 1px 1px 1px white; */
+}
+
+.App{
+  background-image: conic-gradient(from 36deg at 20% 80%, #A100FFFF 0%, #000000 25%, #119CFDFF 30%)
+}

@@ -1,0 +1,219 @@
+
+
+.Contacts-Div {
+    background-color: transparent;
+    width: 100%;
+    height: 100dvh;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conatact-container {
+    position: absolute;
+    width: 80dvw;
+    height: 70dvh;
+    top: 20dvh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+
+}
+
+.contact-div {
+    color: white;
+    font-family: "Playwrite HR Lijeva", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 2.5em;
+    margin-top: -20vh;
+    text-shadow: 1px 1px 10px rebeccapurple;
+}
+
+.contact-icons {
+    width: 80vw;
+    margin-top: -40vh;
+}
+
+.contact-icons ul {
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    /* width: 100%; */
+}
+
+.contact-icons ul li {
+    width: auto;
+    height: auto;
+    display: flex;
+    place-content: center;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    align-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: transparent;
+    flex-direction: column;
+    animation: shake 0.5s ease-in-out infinite;
+    animation-fill-mode: both;
+    animation-timing-function:ease-in-out;
+}
+
+
+
+
+ul li .Cnt-Icons {
+    filter: drop-shadow(2px 2px 10px #9c00f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    font-size: "50px";
+    border-radius: 10%;
+    transition:all 0.8s ;
+    /* box-shadow: 0px 0px 10px 1px white;  */
+}
+
+ul li {
+    display: flex;
+    position: relative;
+    
+}
+
+
+ul li .Cnt-Icons:hover {
+
+    color: white;
+    /* -webkit-text-stroke: 1px black; */
+    /* box-shadow: 0px 0px 100px 1px #00ffaa; */
+    filter: drop-shadow(0px 0px 10px #00ffaa);
+}
+
+.icons-title {
+    width: auto;
+    height: auto;
+    /* border: 1px solid white; */
+    font-size: 2em;
+    font-weight: bold;
+    place-content: center;
+    display: flex;
+    color: white;
+    align-items: center;
+    text-shadow: 1px 1px 10px black;
+    justify-content: center;
+    cursor: pointer;
+    display: none;
+    transition-property:font-weight;
+    transition-duration: 2s;
+}
+
+li:hover .icons-title {
+    display: block;
+    justify-content: center;
+    place-content: center;
+    display: flex;
+    color: white;
+    align-items: center;
+    text-shadow: 1px 1px 2px black;
+}
+
+
+@media (300px <= width <= 600px){
+
+
+    .Contacts-Div {
+        background-color: transparent;
+        width: 100%;
+        height: 100dvh;
+        overflow-x: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .conatact-container {
+        position: absolute;
+        width: 80dvw;
+        height: 70dvh;
+        top: 30vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid transparent;
+    }
+
+    .contact-icons {
+       
+        margin-top: 0;
+    
+    }
+
+    .contact-icons ul {
+        top: -40px;
+        padding-left: 0px;
+        display: grid;
+        row-gap: 1em;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 0px;
+        row-gap: 40px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        /* width: 100%; */
+    }
+
+    .whats-li {
+        grid-column: span 2;
+    }
+
+    .contact-div {
+        color: black;
+        font-family: "Playwrite HR Lijeva", cursive;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
+        font-size: 2.5em;
+        margin-top: -20vh;
+        text-shadow: 2px 2px 2px white;
+    }
+
+    #card {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        transition: 700ms;
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+        background-position-y: 0px;
+        background-origin: border-box;
+        /* background-attachment: fixed; */
+        background-repeat: no-repeat;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+}
+

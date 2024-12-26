@@ -1,0 +1,557 @@
+* {
+
+    scroll-behavior: smooth;
+
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+
+}
+
+::-webkit-slider-thumb {
+    background-color: #697565;
+
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+    /* border-radius: 10px; */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+
+
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    cursor: pointer;
+
+}
+
+
+.MainComponents-Container {
+    height: 7vh;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    padding: 4px 0px 4px 0px;
+    box-shadow: 0px 6px 14px -2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 6px 14px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 6px 14px -2px rgba(0, 0, 0, 0.75);
+}
+
+
+.Logo-div {
+    margin-top: -1vh;
+    color: white;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+.Logo-div a {
+    margin: 0px 0px 0px 5px;
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 200;
+    font-size: x-large;
+    font-style: normal;
+    color: white;
+}
+
+
+
+.Navlink {
+    border-radius: 10px;
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+    /* width: 20vw; */
+    /* background-color: orange; */
+    font-family: "Playwrite HR Lijeva", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 5px 10px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.Navlink:hover {
+    color: white;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+
+}
+
+
+ul li {
+    list-style: none;
+    text-decoration: none;
+    position: relative;
+    width: auto;
+}
+
+.Navlink::before {
+    content: " ";
+    width: 0;
+    /* background: linear-gradient(0.25turn, #006400, #2E8B57, #4CAF50, #3B6B3A, #1B3B2F); */
+    background-image: conic-gradient(from 36deg at 20% 80%, #A100FFFF 0%, #000000 25%, white 30%);
+    height: 2px;
+    position: absolute;
+    top: 30px;
+    left: 1px;
+    border-radius: 8px;
+    transition: 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+}
+
+
+.Navlink:hover::before {
+    width: 100%;
+    /* background:url("/public/Components/Background/7172054_3572249.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.active {
+    color: #f4f4f4;
+    /* Active link color */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.active::before {
+    content: " ";
+    width: 100%;
+    /* background: linear-gradient(0.25turn, #006400, #2E8B57, #4CAF50, #3B6B3A, #1B3B2F); */
+    background-image: conic-gradient(from 36deg at 20% 80%, #A100FFFF 0%, #000000 25%, white 30%);
+    height: 2px;
+    position: absolute;
+    top: 30px;
+    left: 1px;
+    border-radius: 8px;
+    transition: 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.Nav-div {
+    display: flex;
+    border: 1px solid transparent;
+    /* top: 8px; */
+    margin-top: -12px;
+
+}
+
+.ul-items1 {
+
+    width: 40%;
+    display: flex;
+
+
+
+}
+
+
+.ul-items2 {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ul-items1 li {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.Nav-Button {
+    color: black;
+    /* background-image: radial-gradient(circle farthest-corner at 32.7% 82.7%, #a0a49f85 8.3%, #181f1688 79.4%); */
+    border: 2px solid black;
+    width: 8vw;
+    height: 4vh;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Playwrite HR Lijeva", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 1s ease;
+    animation: btn-anime 10s infinite ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.Nav-Button:hover {
+    box-shadow: 0px 0px 2px 5px rgba(54, 51, 51, 0.993);
+    color: black;
+}
+
+.Nav-Button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.566) 10%, transparent 70%);
+    opacity: 0;
+    pointer-events: none;
+    animation: spark-animation 2s infinite;
+}
+
+.Nav-Button:hover::before {
+    animation: spark-animation 1s infinite;
+}
+
+@keyframes spark-animation {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+@keyframes btn-anime {
+    0% {
+        transform: scale(1);
+        color: black;
+    }
+
+    50% {
+        transform: scale(1.1);
+        color: black;
+    }
+
+    100% {
+        transform: scale(1);
+        color: black;
+    }
+}
+
+
+.Nav-Button:hover {
+
+    width: 8.5vw;
+    height: 4.5vh;
+    border-radius: 4px;
+    border-color: white;
+    color: white;
+    background-image: radial-gradient(circle farthest-corner at 83.7% 4.3%, rgba(173, 0, 171, 1) 0%, rgba(15, 51, 92, 1) 90%);
+    animation: out;
+    box-shadow: 1px 0px 9px 2px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 1px 0px 9px 2px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 1px 0px 9px 2px rgba(255, 255, 255, 1);
+}
+
+@keyframes out {
+
+    0% {
+
+        background-image: radial-gradient(circle farthest-corner at 83.7% 4.3%, rgba(173, 0, 171, 1) 0%, rgba(15, 51, 92, 1) 90%);
+    }
+
+}
+
+.Dicons {
+    color: white;
+    display: none;
+}
+
+.Nav-Button:hover .Dicons {
+    margin-left: -10px;
+    display: block;
+}
+
+@media (300px <=width <=600px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .MainComponents-Container {
+        height: 7vh;
+        background-color: transparent;
+        backdrop-filter: blur(15px);
+        width: 100%;
+        position: fixed;
+        z-index: 9999;
+        padding: 4px 0px 4px 0px;
+        box-shadow: none;
+    }
+
+
+
+    .Logo-div {
+        margin-top: -1vh;
+        color: black;
+        font-size: xx-large;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: flex-start;
+    }
+
+    .Logo-div a {
+        margin: 0px 0px 0px 5px;
+        font-family: "Lavishly Yours", cursive;
+        font-weight: 200;
+        font-size: x-large;
+        font-style: normal;
+        color: white;
+    }
+
+
+
+    .Navlink {
+        border-radius: 10px;
+        background-color: transparent;
+        text-decoration: none;
+        color: black;
+        /* width: 20vw; */
+        /* background-color: orange; */
+        font-family: "Playwrite HR Lijeva", cursive;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        padding: 5px 10px;
+        text-shadow: 1px 1px 1px black;
+        display: none;
+    }
+
+    .Navlink:hover {
+        color: white;
+        text-shadow: 1px 1px 1px rgb(0, 0, 0);
+
+    }
+
+
+    ul li {
+        list-style: none;
+        text-decoration: none;
+        position: relative;
+        width: auto;
+    }
+
+    .Navlink::before {
+        content: " ";
+        width: 0;
+        /* background: linear-gradient(0.25turn, #006400, #2E8B57, #4CAF50, #3B6B3A, #1B3B2F); */
+        background-image: conic-gradient(from 36deg at 20% 80%, #A100FFFF 0%, #000000 25%, white 30%);
+        height: 2px;
+        position: absolute;
+        top: 30px;
+        left: 1px;
+        border-radius: 8px;
+        transition: 1s ease-in-out;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .Navlink:hover::before {
+        width: 100%;
+        /* background:url("/public/Components/Background/7172054_3572249.jpg"); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .active {
+        color: #f4f4f4;
+        /* Active link color */
+        font-weight: bold;
+        text-shadow: 1px 1px 2px #000000;
+    }
+
+    .active::before {
+        content: " ";
+        width: 100%;
+        /* background: linear-gradient(0.25turn, #006400, #2E8B57, #4CAF50, #3B6B3A, #1B3B2F); */
+        background-image: conic-gradient(from 36deg at 20% 80%, #A100FFFF 0%, #000000 25%, white 30%);
+        height: 2px;
+        position: absolute;
+        top: 30px;
+        left: 1px;
+        border-radius: 8px;
+        transition: 1s ease-in-out;
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    .Nav-div {
+        display: flex;
+        /* border: 1px solid transparent; */
+        /* margin-top: -12px; */
+        flex-direction: column;
+
+    }
+
+    .ul-items1 {
+
+        width: 100%;
+        display: flex;
+        /* position: absolute; */
+        justify-content: space-between;
+        margin-left: -28px;
+
+    }
+
+    .ul-items2 {
+        width: 40vw;
+        margin-left: 11.7875em;
+        margin-top: -2.9em;
+        justify-content: center;
+    }
+
+    .ul-items1 li {
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+
+    .Nav-Button {
+        color: black;
+        /* background-image: radial-gradient(circle farthest-corner at 32.7% 82.7%, #a0a49f85 8.3%, #181f1688 79.4%); */
+        border: 2px solid black;
+        width: 35vw;
+        height: 4vh;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: "Playwrite HR Lijeva", cursive;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        transition: all 1s ease;
+        animation: btn-anime 10s infinite ease-in-out;
+        position: relative;
+        /* overflow: hidden; */
+    }
+
+
+    .Nav-Button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.566) 10%, transparent 70%);
+        opacity: 0;
+        pointer-events: none;
+        animation: spark-animation 2s infinite;
+    }
+
+    .Nav-Button:hover::before {
+        animation: spark-animation 1s infinite;
+    }
+
+    @keyframes spark-animation {
+
+        0%,
+        100% {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scale(1.5);
+        }
+    }
+
+    @keyframes btn-anime {
+        0% {
+            transform: scale(1);
+            color: black;
+        }
+
+        50% {
+            transform: scale(1.1);
+            color: black;
+        }
+
+        100% {
+            transform: scale(1);
+            color: black;
+        }
+    }
+
+
+    .Nav-Button:hover {
+
+        width:35vw;
+        height: 4.5vh;
+        border-radius: 4px;
+        border-color: white;
+        color: white;
+        background-image: radial-gradient(circle farthest-corner at 83.7% 4.3%, rgba(173, 0, 171, 1) 0%, rgba(15, 51, 92, 1) 90%);
+        animation: out;
+        box-shadow: 1px 0px 9px 2px rgba(255, 255, 255, 1);
+        -webkit-box-shadow: 1px 0px 9px 2px rgba(255, 255, 255, 1);
+        -moz-box-shadow: 1px 0px 9px 2px rgba(255, 255, 255, 1);
+    }
+
+    @keyframes out {
+
+        0% {
+
+            background-image: radial-gradient(circle farthest-corner at 83.7% 4.3%, rgba(173, 0, 171, 1) 0%, rgba(15, 51, 92, 1) 90%);
+        }
+
+    }
+
+    .Dicons {
+        color: white;
+        display: none;
+    }
+
+    .Nav-Button:hover .Dicons {
+        margin-left: -10px;
+        display: block;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    
+   
+
+
+}
