@@ -27,7 +27,7 @@ function NavBar() {
           <li onClick={() => handleClick("About")}><a href='#About' className={`Navlink ${activeSection === "About" ? 'active' : ''}`}>About</a></li>
           <li onClick={() => handleClick("Project")}><a href='#Project' className={`Navlink ${activeSection === "Project" ? 'active' : ''}`}>Project</a></li>
           <li onClick={() => handleClick("Contact")}><a href='#Contact' className={`Navlink ${activeSection === "Contact" ? 'active' : ''}`}>Contact</a></li>
-          <li><a href='Assets/Resume.pdf' for="Resume" download="Pokesh-kumar_Resume">
+          <li><a href='Assets/Pokesh-kumar_Resume.pdf' for="Resume" download="Pokesh-kumar_Resume">
             <button id='Resume' className='Nav-Button'>Resume<FontAwesomeIcon className='Dicons' icon={faDownload} /></button>
           </a></li>
         </ul>
